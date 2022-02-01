@@ -26,14 +26,14 @@ namespace API.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<byte[]>("PasswordHash")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<byte[]>("PasswordSalt")
+                        .HasColumnType("varbinary(max)");
+
                     b.Property<string>("UserName")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<byte[]>("passwordHash")
-                        .HasColumnType("varbinary(max)");
-
-                    b.Property<byte[]>("passwordSalt")
-                        .HasColumnType("varbinary(max)");
 
                     b.HasKey("Id");
 
