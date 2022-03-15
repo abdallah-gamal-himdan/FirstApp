@@ -20,7 +20,6 @@ namespace API.Extensions
             {
                 options.UseSqlServer(config.GetConnectionString("DefaultConnection"));
             });
-
             return services;
         }
     }
