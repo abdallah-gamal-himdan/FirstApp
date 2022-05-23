@@ -50,8 +50,7 @@ export class RegisterComponent implements OnInit {
     {
       return control?.value === control?.parent?.controls[matchTo].value ? 
       null : {isNotMatching :true};
-    }
-    
+    }    
   }
 
   register() {
